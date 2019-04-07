@@ -1,0 +1,1 @@
+<view id="city" bind:__l="__l">!-- 自定义导航栏 --><cmd-nav-bar fixed="{{true}}" background-color="#1296db" back left-text="选择城市" font-color="#fff"></cmd-nav-bar><cmd-nav-bar fixed="{{false}}" background-color="#fff"></cmd-nav-bar><city-picker></city-picker></view>

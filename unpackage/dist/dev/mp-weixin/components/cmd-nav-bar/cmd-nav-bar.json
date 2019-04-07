@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cmd-icon": "/components/cmd-nav-bar/cmd-icon"
+  },
+  "component": true
+}

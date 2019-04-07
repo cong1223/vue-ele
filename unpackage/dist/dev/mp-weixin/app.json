@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/address/address",
+    "pages/city/city"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "外卖",
+        "iconPath": "./static/ele.png",
+        "selectedIconPath": "./static/ele-a.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "外卖",
+        "iconPath": "./static/dingdan.png",
+        "selectedIconPath": "./static/dingdan-a.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "外卖",
+        "iconPath": "./static/my.png",
+        "selectedIconPath": "./static/my-a.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cmd-nav-bar": "/components/cmd-nav-bar/cmd-nav-bar"
+  }
+}
