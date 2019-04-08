@@ -102,11 +102,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/cmd-nav-bar/cmd-nav-bar":1,"components/city-picker/mpvueCityPicker":1,"components/cmd-nav-bar/cmd-icon":1};
+/******/ 		var cssChunks = {"components/cmd-nav-bar/cmd-nav-bar":1,"components/cmd-nav-bar/cmd-icon":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/cmd-nav-bar/cmd-nav-bar":"components/cmd-nav-bar/cmd-nav-bar","components/city-picker/mpvueCityPicker":"components/city-picker/mpvueCityPicker","components/cmd-nav-bar/cmd-icon":"components/cmd-nav-bar/cmd-icon"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/cmd-nav-bar/cmd-nav-bar":"components/cmd-nav-bar/cmd-nav-bar","components/cmd-nav-bar/cmd-icon":"components/cmd-nav-bar/cmd-icon"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

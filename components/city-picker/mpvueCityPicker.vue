@@ -36,7 +36,7 @@ export default {
       cityDataList: [],
       areaDataList: [],
 			/* 是否显示控件 */
-			showPicker: false,
+			showPicker: true,
     };
   },
   created() {
