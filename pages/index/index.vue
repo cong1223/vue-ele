@@ -7,12 +7,6 @@
 			left-text="饿了么"
 			font-color="#fff"
 		/>
-		<!-- 导航栏占位区开始 -->
-		<cmd-nav-bar
-			:fixed="false" 
-			background-color="#fff"
-		/>
-		<!-- 导航栏占位区结束-->
 		<view class="info">
 			<view class="addr" @tap="skipToLocation">
 				<text class="ele-iconfont ele-pos">&#xe604;</text>

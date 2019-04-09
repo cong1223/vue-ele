@@ -1,5 +1,5 @@
 <template>
-  <view :class="fixed ? 'cmd-nav-bar-fixed' : ''" :style="setBackgroundColor">
+  <view :class="fixed ? 'cmd-nav-bar-sticky' : ''" :style="setBackgroundColor">
     <view class="status-bar"></view>
     <view class="cmd-nav-bar">
       <view class="cmd-nav-bar-left">
@@ -208,12 +208,9 @@
   $cmd-nav-bar-font-size : 32upx;
 
   /* 固定到页面顶部 */
-  .cmd-nav-bar-fixed {
-    position: fixed;
+  .cmd-nav-bar-sticky {
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
     background: $cmd-nav-bar-background;
   }
 
