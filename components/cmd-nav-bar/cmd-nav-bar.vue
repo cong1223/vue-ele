@@ -8,7 +8,7 @@
           <cmd-icon :type="back ?'chevron-left' : iconOne" size="24" :color="setFontColor"></cmd-icon>
         </view>
 				<!-- 左侧自定义图标开始 -->
-				<view class="grace-iconfont icon-home icons.enName" :style="'color:'+setFontColor+'!important'"></view>
+				<slot name="customIcon"></slot>
 				<!-- 左侧自定义图标结束 -->
         <text v-if="leftText && !leftTitle" @tap="$_leftTextClick" :style="'color:'+setFontColor">{{leftText}}</text>
       </view>
@@ -26,6 +26,8 @@
         <text v-if="rightText" @tap="$_rightTextClick" class="cmd-nav-bar-right-text" :style="(rightColor != '' ? 'color:'+rightColor : 'color:'+setFontColor)">{{rightText}}</text>
       </view>
     </view>
+		<!-- 搜索框插槽 -->
+		<slot name="search"></slot>
   </view>
 </template>
 
@@ -129,7 +131,14 @@
       iconFour: {
         type: String,
         default: ''
-      }
+      },
+			/**
+			 * 是否需要搜索框
+			 */
+			search: {
+			  type: Boolean,
+			  default: false
+			}
     },
 
     computed: {
@@ -152,7 +161,7 @@
           backgroundColor = `background: ${this.backgroundColor};`;
         }
         return backgroundColor;
-      }
+      },
     },
 
     methods: {
@@ -206,10 +215,11 @@
   $cmd-nav-bar-color : #000;
   $cmd-nav-bar-background : #fff;
   $cmd-nav-bar-font-size : 32upx;
-
+	
   /* 固定到页面顶部 */
   .cmd-nav-bar-sticky {
     position: sticky;
+		z-index: 99999;
     top: 0;
     background: $cmd-nav-bar-background;
   }
@@ -291,8 +301,6 @@
         margin-left: 20upx;
         font-weight: 500;
       }
-
     }
-
   }
 </style>

@@ -29,6 +29,7 @@
 .cmd-nav-bar-sticky {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 99999;
   top: 0;
   background: #fff;
 }

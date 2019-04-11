@@ -1,8 +1,20 @@
 <template>
 	<view>
-		<view class="input">
-			<input placeholder="输入城市名或拼音查询" placeholder-style="font-size: 13px" :value="inputName" @input="bindKeyInput" @blur="bindBlur" />
-		</view>
+		<!-- 自定义导航栏 -->
+		<cmd-nav-bar
+					:fixed="true" 
+					background-color="#1296db"
+					left-text="选择城市"
+					back
+					font-color="#fff"
+					placeholder="请输入要搜索的城市名称或拼音">
+			<template v-slot:search>
+				<view class="nav-search">
+					<image src="../../static/sousuo.png"></image>
+					<input placeholder="输入城市名或拼音查询" placeholder-style="font-size: 13px" :value="inputName" @input="bindKeyInput" @blur="bindBlur" />
+				</view>
+			</template>
+		</cmd-nav-bar>
 
 		<view class="container-inner">
 			<view class="searchLetter touchClass">
@@ -34,7 +46,7 @@
 
 
 					<view class="selectCity">
-						<view class="hotcity-common" @click="reGetLocation" id="currentcity">重新定位城市</view>
+						<view class="hotcity-common" @click="reGetLocation" id="currentcity">当前定位城市</view>
 						<view class="thisCityName" @click="bindCity" :data-code="currentCityCode" :data-city="currentCity">{{ currentCity }}</view>
 
 						<view class="hotcity-common">热门城市</view>
@@ -264,7 +276,7 @@
 	};
 </script>
 
-<style>
+<style lang="scss">
 	.container-inner {
 		display: flex;
 		flex-direction: row-reverse;
@@ -278,11 +290,11 @@
 
 	}
 
-	input {
+	/* input {
 		text-align: center;
 		font-size: 32upx;
 		padding: 5px;
-	}
+	} */
 
 	.searchLetter {
 		flex-shrink: 0;
@@ -434,14 +446,14 @@
 		padding: 16upx 0;
 	}
 
-	input {
+	/* input {
 		background-color: #eee;
 	}
 
 	.input {
 		padding: 16upx;
 		border-bottom: 1upx solid #f1f1f1;
-	}
+	} */
 
 	.county {
 		display: flex;
@@ -450,5 +462,31 @@
 
 	view {
 		display: block;
+	}
+	
+	/**
+	 * 搜索框区域
+	 */
+	.nav-search{
+		width: 100%;
+		padding: 16upx;
+		box-sizing: border-box;
+		border-bottom: 1upx solid #f1f1f1;
+		vertical-align: auto;
+		position: relative;
+		input {
+			border-radius: 40upx;
+			font-size: 28upx;
+			padding: 5upx 80upx;
+			background-color: #fff;
+		}
+		image{
+			width: 40upx;
+			height: 40upx;
+			position: absolute;
+			left: 50upx;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 </style>

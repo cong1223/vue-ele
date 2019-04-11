@@ -26,13 +26,13 @@
       },
       {
         "pagePath": "pages/order/order",
-        "text": "外卖",
+        "text": "订单",
         "iconPath": "./static/dingdan.png",
         "selectedIconPath": "./static/dingdan-a.png"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "外卖",
+        "text": "我的",
         "iconPath": "./static/my.png",
         "selectedIconPath": "./static/my-a.png"
       }
